@@ -1,0 +1,67 @@
+cat > .gitignore <<'EOF'
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Machine learning models and caches
+.cache/
+**/.cache/
+huggingface/
+**/huggingface/
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Local data and cloned repositories
+backend/data/
+backend/repos/
+data/
+repos/
+chroma_db/
+**/chroma_db/
+*.sqlite
+*.sqlite3
+*.db
+
+# Logs and temporary files
+*.log
+.DS_Store
+*.tmp
+*.bak
+
+# Frontend dependencies and build output
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+dist/
+build/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Local editor settings
+.vscode/
+.idea/
+EOF
