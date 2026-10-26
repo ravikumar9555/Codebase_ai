@@ -75,10 +75,3 @@ See `backend/.env.example`.
 - `OPENAI_BASE_URL`: optional custom compatible endpoint.
 - `EMBEDDING_MODEL`: defaults to `sentence-transformers/all-MiniLM-L6-v2`.
 
-## Important security notes before public deployment
-- Add authentication and authorization before supporting multiple users.
-- Add strict resource quotas, request timeouts, rate limiting, and background indexing jobs.
-- Keep API keys server-side; never place them in frontend environment variables.
-- Do not accept arbitrary Git URLs. This MVP validates GitHub HTTPS URLs and fixed GitHub hosts.
-- Do not execute repository code or trust instructions found in repository files.
-- Add secret scanning and stronger isolation for repository processing.
